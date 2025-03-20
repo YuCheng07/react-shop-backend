@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "aa1000@email.com",
+      "password": "aa1000",
+      "createdAt": "1742223282645",
+      "name": "",
+      "role": "user",
+      "line_id": "",
+      "login_type": ""
+    },
+    {
+      "id": 2,
+      "email": "aa2000@email.com",
+      "password": "aa2000",
+      "createdAt": "1742223301569"
+    },{
+      "id": 3,
+      "email": "aa3000@email.com",
+      "password": "aa3000",
+      "createdAt": "1742223314671"
+
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "熱血戰士 - 可動模型",
+      "category": "模型",
+      "price": 1299,
+      "currency": "TWD",
+      "stock": 20,
+      "description": "高度可動的熱血戰士模型，附帶多種武器與配件。",
+      "tags": ["熱門商品"]
+    },
+    {
+      "id": 2,
+      "name": "魔法少女 - 限定海報",
+      "category": "海報",
+      "price": 299,
+      "currency": "TWD",
+      "stock": 50,
+      "description": "精美印刷的魔法少女海報，適合收藏與裝飾。",
+      "tags": ["限時特價"]
+    },
+    {
+      "id": 3,
+      "name": "忍者傳奇 - 官方T恤",
+      "category": "服裝",
+      "price": 699,
+      "currency": "TWD",
+      "stock": 35,
+      "description": "忍者傳奇官方授權T恤，採用高品質純棉材質。",
+      "tags": ["近期新品"]
+    },
+    {
+      "id": 4,
+      "name": "異世界冒險 - 原聲CD",
+      "category": "音樂",
+      "price": 499,
+      "currency": "TWD",
+      "stock": 15,
+      "description": "包含異世界冒險動畫所有經典配樂的原聲CD。",
+      "tags": ["本日推薦"]
+    },
+    {
+      "id": 5,
+      "name": "機械戰士 - 收藏卡牌",
+      "category": "卡牌",
+      "price": 199,
+      "currency": "TWD",
+      "stock": 100,
+      "description": "機械戰士主題的收藏卡牌包，每包內含5張隨機卡片。",
+      "tags": ["限時特價"]
+    },
+    {
+      "id": 6,
+      "name": "未來騎士 - 公仔",
+      "category": "模型",
+      "price": 1599,
+      "currency": "TWD",
+      "stock": 10,
+      "description": "精細雕刻的未來騎士公仔，適合收藏。",
+      "tags": ["熱門商品"]
+    },
+    {
+      "id": 7,
+      "name": "銀河探險 - 插畫海報",
+      "category": "海報",
+      "price": 399,
+      "currency": "TWD",
+      "stock": 40,
+      "description": "充滿科幻感的銀河探險海報，適合房間裝飾。",
+      "tags": ["近期新品"]
+    },
+    {
+      "id": 8,
+      "name": "賽博忍者 - 連帽衫",
+      "category": "服裝",
+      "price": 999,
+      "currency": "TWD",
+      "stock": 25,
+      "description": "帶有賽博朋克風格的忍者連帽衫，時尚又實用。",
+      "tags": ["限時特價"]
+    },
+    {
+      "id": 9,
+      "name": "魔法世界 - 音樂合輯",
+      "category": "音樂",
+      "price": 599,
+      "currency": "TWD",
+      "stock": 12,
+      "description": "包含多首魔法世界動畫中的經典曲目。",
+      "tags": ["本日推薦"]
+    },
+    {
+      "id": 10,
+      "name": "超能機甲 - 限量卡牌",
+      "category": "卡牌",
+      "price": 249,
+      "currency": "TWD",
+      "stock": 80,
+      "description": "超能機甲系列的限量卡牌包，內含特殊閃卡。",
+      "tags": ["熱門商品"]
+    },
+    {
+      "id": 11,
+      "name": "傳說武士 - 可動模型",
+      "category": "模型",
+      "price": 1399,
+      "currency": "TWD",
+      "stock": 18,
+      "description": "高度可動的傳說武士模型，含多種武器配件。",
+      "tags": ["本日推薦"]
+    },
+    {
+      "id": 12,
+      "name": "宇宙冒險 - 精美畫冊",
+      "category": "書籍",
+      "price": 899,
+      "currency": "TWD",
+      "stock": 30,
+      "description": "宇宙冒險動畫官方畫冊，收錄大量原畫與設定資料。",
+      "tags": ["熱門商品"]
+    },
+    {
+      "id": 13,
+      "name": "古代戰士 - 收藏雕像",
+      "category": "模型",
+      "price": 1999,
+      "currency": "TWD",
+      "stock": 5,
+      "description": "古代戰士精美雕像，手工上色，適合收藏。",
+      "tags": ["限時特價"]
+    },
+    {
+      "id": 14,
+      "name": "戰鬥機甲 - T恤",
+      "category": "服裝",
+      "price": 799,
+      "currency": "TWD",
+      "stock": 28,
+      "description": "帶有戰鬥機甲設計的潮流T恤，適合日常穿搭。",
+      "tags": ["近期新品"]
+    },
+    {
+      "id": 15,
+      "name": "機械都市 - 電子音樂專輯",
+      "category": "音樂",
+      "price": 549,
+      "currency": "TWD",
+      "stock": 20,
+      "description": "機械都市主題的電子音樂專輯，帶你進入未來世界。",
+      "tags": ["本日推薦"]
+    },
+    {
+      "id": 16,
+      "name": "超時空戰士 - 限定海報",
+      "category": "海報",
+      "price": 349,
+      "currency": "TWD",
+      "stock": 35,
+      "description": "超時空戰士動畫限定版海報，適合收藏。",
+      "tags": ["熱門商品"]
+    },
+    {
+      "id": 17,
+      "name": "龍族秘寶 - 珍藏卡牌",
+      "category": "卡牌",
+      "price": 299,
+      "currency": "TWD",
+      "stock": 75,
+      "description": "龍族秘寶主題珍藏卡牌，內含稀有卡。",
+      "tags": ["限時特價"]
+    },
+    {
+      "id": 18,
+      "name": "機甲騎士 - 盔甲模型",
+      "category": "模型",
+      "price": 1899,
+      "currency": "TWD",
+      "stock": 8,
+      "description": "機甲騎士的盔甲模型，金屬質感強烈。",
+      "tags": ["近期新品"]
+    },
+    {
+      "id": 19,
+      "name": "魔法學院 - 原聲CD",
+      "category": "音樂",
+      "price": 499,
+      "currency": "TWD",
+      "stock": 22,
+      "description": "魔法學院動畫原聲CD，帶你回味經典旋律。",
+      "tags": ["本日推薦"]
+    },
+    {
+      "id": 20,
+      "name": "星際探險 - 精選畫冊",
+      "category": "書籍",
+      "price": 999,
+      "currency": "TWD",
+      "stock": 18,
+      "description": "星際探險動畫的設定集，包含角色與場景設計。",
+      "tags": ["熱門商品"]
+    }
+  ]
+}
