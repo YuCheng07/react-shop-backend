@@ -1,7 +1,11 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../config/firebase')
-const { createJWT, hashPassword, comparePassword } = require('../utils/auth_util')
+const {
+	createJWT,
+	hashPassword,
+	comparePassword,
+} = require('../utils/auth_util')
 
 router.post('/signup', async (req, res) => {
 	const { email, password } = req.body
@@ -23,14 +27,24 @@ router.post('/signup', async (req, res) => {
 				name: '',
 				password: hashPW,
 				role: 'user',
-        login_type: 'origin'
+				login_type: 'origin',
 			}
 
 			const newUser = await db.collection('users').add(userData)
 			if (newUser.id) {
+				const newUserData = await newUser.get()
+
+				const payload = {
+					id: newUserData.data().id,
+					name: newUserData.data().name,
+					role: newUserData.data().role,
+				}
+				const token = createJWT(payload)
+
 				res.status(200).json({
 					status: 'success',
 					message: '帳號註冊成功',
+					data: { token: token },
 				})
 			} else {
 				res.status(500).json({
@@ -62,18 +76,18 @@ router.post('/login', async (req, res) => {
 		if (!snapshot.empty) {
 			const user = snapshot.docs[0].data()
 			const isCorrect = await comparePassword(password, user.password)
-      const payload = {
-        id: user.id,
-        name: user.name,
-        role: user.role,
-      }
-      const token = createJWT(payload)
-      
+			const payload = {
+				id: user.id,
+				name: user.name,
+				role: user.role,
+			}
+			const token = createJWT(payload)
+
 			if (isCorrect) {
 				res.status(200).json({
 					status: 'success',
 					message: '登入成功',
-          data: { token: token }
+					data: { token: token },
 				})
 			} else {
 				res.status(200).json({

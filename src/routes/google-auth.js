@@ -20,7 +20,7 @@ router.get('/google/verify-token', async (req, res) => {
 		code: code,
 		client_id: GOOGLE_CLIENT_ID,
 		client_secret: GOOGLE_CLIENT_SECRET_KEY,
-		redirect_uri: `${BASE_URL}/api/google/verify-token`, // 確保這與 Google Console 設定的 redirect URI 完全一致
+		redirect_uri: `${BASE_URL}/api/google/verify-token`,
 		grant_type: 'authorization_code',
 	})
 
