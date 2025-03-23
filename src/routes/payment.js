@@ -29,20 +29,17 @@ router.post('/payment/create-order/newebpay', (req, res) => {
 
   const aesEncryptTradeInfo = aesEncrypt(tradeInfo)
   const shaEncrypt = sha256Hash(aesEncryptTradeInfo)
-  console.log('已打API');
+
+  const params = new URLSearchParams({
+    MerchantID: NEWEBPAY_STORE_ID,
+    TradeInfo: aesEncryptTradeInfo,
+    TradeSha: shaEncrypt,
+    Version: '2.0',
+  });
+  console.log('已打api');
   
-	res.send(`
-    <html>
-      <body onload="document.forms[0].submit()">
-        <form method="post" action="${NEWEBPAY_API_URL}">
-          <input type="hidden" name="MerchantID" value="${NEWEBPAY_STORE_ID}">
-          <input type="hidden" name="TradeInfo" value="${aesEncryptTradeInfo}">
-          <input type="hidden" name="TradeSha" value="${shaEncrypt}">
-          <input type="hidden" name="Version" value="2.0">
-        </form>
-      </body>
-    </html>
-  `);
+  // 重定向到 Newebpay 付款頁面
+  res.redirect(`${NEWEBPAY_API_URL}?${params.toString()}`);
 })
 
 router.get('/payment/return/newebpay', (req, res) => {
