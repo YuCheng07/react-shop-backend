@@ -29,7 +29,8 @@ router.post('/payment/create-order/newebpay', (req, res) => {
 
   const aesEncryptTradeInfo = aesEncrypt(tradeInfo)
   const shaEncrypt = sha256Hash(aesEncryptTradeInfo)
-
+  console.log('已打API');
+  
 	res.send(`
     <html>
       <body onload="document.forms[0].submit()">
