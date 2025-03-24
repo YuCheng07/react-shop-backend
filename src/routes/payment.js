@@ -42,9 +42,9 @@ router.post('/payment/create-order/newebpay', (req, res) => {
 		aesEncryptTradeInfo
 	)}&TradeSha=${encodeURIComponent(shaEncrypt)}&Version=${encodeURIComponent(
 		'2.0'
-	)}}`
+	)}`
 
-	res.state(200).json({
+	res.status(200).json({
 		status: 'success',
 		message: '獲取付款連結成功',
 		data: { paymentUrl: paymentUrl },
