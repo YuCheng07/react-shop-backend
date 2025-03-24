@@ -4,7 +4,7 @@ const productData = require('../mock/animeItem_mock.json')
 const userData = require('../mock/user_mock.json')
 
 router.post('/add-test-data', async (req, res) => {
-  const result = await addData(userData)
+  const result = await addData(productData)
   if(result){
     res.send('新增資料完成')
   }else{
@@ -14,8 +14,8 @@ router.post('/add-test-data', async (req, res) => {
 
 const addData = async (data) => {
   try {
-    data.users.forEach(async (item, index) => {
-      await db.collection('users').add(item)
+    data.products.forEach(async (item, index) => {
+      await db.collection('products').add(item)
     })
     console.log('新增資料完成')
     return true
