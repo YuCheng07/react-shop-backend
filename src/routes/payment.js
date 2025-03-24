@@ -17,7 +17,7 @@ router.post('/payment/create-order/newebpay', (req, res) => {
 	const tradeInfo = new URLSearchParams({
 		MerchantID: NEWEBPAY_STORE_ID,
 		RespondType: 'JSON',
-		Timestamp: timestamp,
+		TimeStamp: timestamp,
 		Version: '2.0',
 		MerchantOrderNo: timestamp,
 		Amt: data.priceTotal,
