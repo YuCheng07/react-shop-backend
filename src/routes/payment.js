@@ -45,6 +45,11 @@ router.post('/payment/create-order/newebpay', (req, res) => {
 
 router.get('/payment/return/newebpay', (req, res) => {
 	console.log(req.body)
+	res.redirect(`${FRONTEND_URL}/checkout-success`)
+})
+
+router.get('/payment/notify/newebpay', (req, res) => {
+	console.log(req.body)
 	res.send('OK')
 })
 
