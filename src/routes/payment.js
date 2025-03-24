@@ -42,9 +42,9 @@ router.post('/payment/create-order/newebpay', verifyToken, async (req, res) => {
 		const newOrder = await db.collection('orders').add({
 			id: userId,
 			orderId: parseInt(new URLSearchParams(tradeInfo).get('MerchantOrderNo')),
-			isPayed: false,
+			isPayed: true,
 			priceTotal: data.priceTotal,
-			cartList: data.simpleCartList,
+			cartList: data.cartList,
 			orderInfo: data.orderInfo,
 			receiptInfo: data.receiptInfo,
 		})
