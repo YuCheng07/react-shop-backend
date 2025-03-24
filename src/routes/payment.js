@@ -37,9 +37,16 @@ router.post('/payment/create-order/newebpay', (req, res) => {
     Version: '2.0',
   });
   console.log('已打api');
-  
-  // 重定向到 Newebpay 付款頁面
-  res.redirect(`${NEWEBPAY_API_URL}?${params.toString()}`);
+
+  axios.post(`${NEWEBPAY_API_URL}`, params)
+    .then(response => {
+      // 將藍新支付的回應返回給前端
+      res.json(response.data);
+    })
+    .catch(error => {
+      console.error('藍新支付 API 請求錯誤:', error);
+      res.status(500).json({ error: '支付請求失敗' });
+    })
 })
 
 router.get('/payment/return/newebpay', (req, res) => {
