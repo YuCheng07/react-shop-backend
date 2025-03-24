@@ -12,9 +12,7 @@ const NEWEBPAY_NOTIFY_URL = process.env.NEWEBPAY_NOTIFY_URL
 const FRONTEND_URL = process.env.FRONTEND_URL
 
 router.post('/payment/create-order/newebpay', (req, res) => {
-	const data = {
-		priceTotal: 1500,
-	}
+	const data = req.body
 	const timestamp = Math.round(new Date().getTime() / 1000)
 	const tradeInfo = new URLSearchParams({
 		MerchantID: NEWEBPAY_STORE_ID,
