@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-
 const db = require('../config/firebase')
+const verifyToken = require('../middlewares/verifyToken')
 
 router.get('/users', async (req, res) => {
 	try {
