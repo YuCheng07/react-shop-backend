@@ -9,6 +9,7 @@ const NEWEBPAY_HASH_IV = process.env.NEWEBPAY_HASH_IV
 const NEWEBPAY_STORE_ID = process.env.NEWEBPAY_STORE_ID
 const NEWEBPAY_API_URL = process.env.NEWEBPAY_API_URL
 const NEWEBPAY_NOTIFY_URL = process.env.NEWEBPAY_NOTIFY_URL
+const FRONTEND_URL = process.env.FRONTEND_URL
 
 router.post('/payment/create-order/newebpay', (req, res) => {
 	const data = {
@@ -30,14 +31,13 @@ router.post('/payment/create-order/newebpay', (req, res) => {
   const aesEncryptTradeInfo = aesEncrypt(tradeInfo)
   const shaEncrypt = sha256Hash(aesEncryptTradeInfo)
 
-  const params = new URLSearchParams({
+  const params = {
     MerchantID: NEWEBPAY_STORE_ID,
     TradeInfo: aesEncryptTradeInfo,
     TradeSha: shaEncrypt,
     Version: '2.0',
-  });
-  res.status(200).json(params)
-
+  }
+  res.redirect(`${FRONTEND_URL}/newebpay-payment?MerchantID=${encodeURIComponent(NEWEBPAY_STORE_ID)}&TradeInfo=${encodeURIComponent(aesEncryptTradeInfo)}&TradeSha=${encodeURIComponent(shaEncrypt)}&Version=${encodeURIComponent('2.0')}}`)
 })
 
 router.get('/payment/return/newebpay', (req, res) => {
