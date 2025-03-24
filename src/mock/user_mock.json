@@ -3,12 +3,12 @@
     {
       "id": 1,
       "email": "aa1000@email.com",
-      "password": "aa1000",
+      "password": "$2b$10$1NaqC8WCgtOSAD3m6vIzcOiJWsogYwyi/DaV.rs4XqaOhwLwxT0Ym",
       "createdAt": "1742223282645",
       "name": "",
       "role": "user",
       "line_id": "",
-      "login_type": ""
+      "login_type": "origin"
     },
     {
       "id": 2,
